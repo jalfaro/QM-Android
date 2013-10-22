@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvPageInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/timer"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/tvSubjectNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="-"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/tvPageNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/etSecond"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBaseline="@+id/etMinute"
+                    android:layout_alignBottom="@+id/etMinute"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:ems="10"
+                    android:hint="@string/second"
+                    android:inputType="number"
+                    android:text="0" />
+
+                <EditText
+                    android:id="@+id/etHour"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="38dp"
+                    android:ems="10"
+                    android:hint="@string/hour"
+                    android:inputType="number"
+                    android:text="0" >
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/etMinute"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBaseline="@+id/etHour"
+                    android:layout_alignBottom="@+id/etHour"
+                    android:layout_centerHorizontal="true"
+                    android:ems="10"
+                    android:hint="@string/minute"
+                    android:inputType="number"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/btnTimerStart"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/etHour"
+                    android:layout_below="@+id/etHour"
+                    android:layout_marginTop="70dp"
+                    android:text="@string/start" />
+
+                <Button
+                    android:id="@+id/btnTimerStop"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/btnTimerStart"
+                    android:layout_alignBottom="@+id/btnTimerStart"
+                    android:layout_alignLeft="@+id/etMinute"
+                    android:text="@string/stop" />
+
+                <Button
+                    android:id="@+id/btnTimerReset"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/btnTimerStop"
+                    android:layout_alignBottom="@+id/btnTimerStop"
+                    android:layout_alignLeft="@+id/etSecond"
+                    android:text="@string/reset" />
+
+                <TextView
+                    android:id="@+id/tvInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/etHour"
+                    android:layout_alignRight="@+id/etSecond"
+                    android:layout_below="@+id/etHour"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+		  <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:text="@string/backbutton"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
